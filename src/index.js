@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import TreePlot from './treePlot';
 import Snackbar from "@material-ui/core/Snackbar";
-//import NotificationMessage from "./MySnackbarContentWrapper";
+import NotificationMessage from "./MySnackbarContentWrapper";
 import './style.scss';
 // import {
 //   getBackwardData,
@@ -195,13 +195,13 @@ class Tree extends React.Component {
             this.setState({ toastOpen: false });
           }}
         >
-          {/*<NotificationMessage
+          <NotificationMessage
             variant={this.state.toastVariant}
             message={this.state.toastMessage}
             onClose={() => {
               this.setState({ toastOpen: false});
             }}
-          />*/}
+          />
         </Snackbar>
 
         
