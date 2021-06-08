@@ -19,8 +19,39 @@ import MyComponent from 'my-tree'
 import 'my-tree/dist/index.css'
 
 class Example extends Component {
+
   render() {
-    return <MyComponent />
+    const config =
+  {
+  data:chartData[0],
+  l: [{ 'icon': '#0000FF', 'name': 'Material' }, { 'icon': '#ff0000', 'name': 'Process Order ' }],  
+  contextmenu: [{
+    Text: 'HOME',
+    Url: 'http://www.google.com',
+  },
+
+  {
+    Text: 'Google Link',
+    Url: 'http://www.google.com',
+  },
+  {
+    Text: 'Yahoo!!',
+    Url: 'http://www.google.com',
+  }
+  ],
+  zoom: true,
+  chartType: 'backward',
+  handleChartClick:this.handleChartClick,
+  selectedHeader:selectedHeader,
+  getBackwardData:getBackwardData,
+  getForwardData:getForwardData,
+  showTreePlot:showTreePlot,
+  nodeId:nodeId
+  }
+
+    return (
+      <MyComponent  config={config}/>
+    ) 
   }
 }
 ```
