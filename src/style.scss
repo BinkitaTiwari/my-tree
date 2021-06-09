@@ -224,9 +224,9 @@ div#federalDiv {
   border: 1px solid black;
   border-radius: 3px;
   width: 120px;
-  height:150px;
-  background: white;
-  box-shadow: 10px 10px 5px #888888;
+  //height:150px;
+  background-color:#adcae6;
+  box-shadow: 10px 10px 5px black;
   padding:10px;
  }
  
@@ -243,14 +243,78 @@ div#federalDiv {
   margin-bottom: 1px;
   color: black;
   font-weight: bold;
-  background-color:	#D3D3D3;
+  background-color:	#adcae6;
  
  }
  
  .context-menu ul li:hover{
   cursor: pointer;
-  background-color: #7fffd4;
+  background-color:#309f9f ;
  }
  
  /* Colors */
+
+ /*.context-menu{
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  background: #adcae6;
+  box-shadow: 10px 10px 5px black;
+  z-index: 10;
+ }
+ 
+ .context-menu ul {
+  padding: 0px;
+  margin: 0px;
+  //min-width: 150px;
+  list-style: none;
+}
+
+ 
+ .context-menu ul li{
+  padding: 5px 2px;
+  margin-bottom: 1px;
+  color: black;
+  font-weight: bold;
+  background:  #307f93;;
+ 
+ }
+ 
+ .context-menu ul li:hover{
+  cursor: pointer;
+  background-color:  #309f9f;
+ }
+ .context-menu-child{
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 200px;
+  background: white;
+  box-shadow: 10px 10px 5px #888888;
+ }
+ 
+ .context-menu-child ul {
+  padding: 0px;
+  margin: 0px;
+  min-width: 150px;
+  list-style: none;
+}
+
+ 
+ .context-menu-child ul li{
+  padding: 5px 2px;
+  margin-bottom: 1px;
+  color:white;
+  font-weight: bold;
+  background-color:	#D3D3D3;
+ 
+ }
+ 
+ .context-menu-child ul li:hover{
+  cursor: pointer;
+  background-color: #7fffd4;
+ }*/
  

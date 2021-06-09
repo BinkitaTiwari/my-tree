@@ -22,11 +22,11 @@ export default class TreePlot extends React.Component {
     this.treeDiv = React.createRef();
     this.backwardTreeDiv = React.createRef();
     this.forwardTreeDiv = React.createRef();
-    this.excludeContent=["children","depth","linkColor","numChildren","traceability","x","x0","y","y0","toolTipDetails","parent","relationshipMap","headername"];
+    this.excludeContent = ["children", "depth", "linkColor", "numChildren", "traceability", "x", "x0", "y", "y0", "toolTipDetails", "parent", "relationshipMap", "headername"];
   }
   componentDidMount() {
-          this.drawChart(this.props.data);
-  
+    this.drawChart(this.props.data);
+
   }
 
   // componentDidUpdate(){
@@ -42,7 +42,7 @@ export default class TreePlot extends React.Component {
     const pColor = this.state.processColor; // FOR PROCESS ORDER COLOR
     const nodeRadius = this.state.nodeRadius; //NODE RADIUS
     const textColor = this.state.textColor
-   
+
     var parent = chartData['type']   //Parent Type
     var child = chartData?.children && chartData?.children.length ? chartData?.children[0].type : ""; //Children Type
 
@@ -525,7 +525,7 @@ export default class TreePlot extends React.Component {
             var id = this.id;
             $("#txt_id").val(id);
             var top = d3.event.pageY - 215;
-            var left = d3.event.pageX -10;
+            var left = d3.event.pageX - 10;
             // Show contextmenu
             $(".context-menu").toggle(100).css({
               top: top + "px",
@@ -800,7 +800,7 @@ export default class TreePlot extends React.Component {
 
         }
         //on right click
-    
+
 
         //get parent and child
 
@@ -999,7 +999,7 @@ export default class TreePlot extends React.Component {
     document.getElementById("abc").style.display = "none";
   }
   render() {
-    
+
     console.log(this.props.data);
     let clickMenu = this.props.Rclick;
     console.log(clickMenu);
@@ -1016,18 +1016,22 @@ export default class TreePlot extends React.Component {
                   <div id="keyTooltip" className="headerattribute row"></div>
                 </div>
               </div>
-                  <div className="context-menu" id="abc">
-                    <ul>  
+
+              {clickMenu ? (
+                <div className="context-menu" id="abc" >
+                  <ul>
                     {clickMenu.map((m) =>
-                  (
-                    <li style={{ marginTop: '0px' }} onClick={() => window.open(m['Url'])}><span>{m['Text']}</span></li>
-                  ))}
-                    </ul>
-                  </div>
+                    (
+                      <li style={{ marginTop: '0px' }} onClick={() => window.open(m['Url'])}><span>{m['Text']}</span></li>
+                    ))}
+                  </ul>
+                </div>
+
+              ) : <div id= "abc"></div>}
             </div>
           </div>
-            </div>
-          </div>
+        </div>
+      </div>
     );
   }
 }
